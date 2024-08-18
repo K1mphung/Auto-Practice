@@ -1,0 +1,4 @@
+# Thêm thư mục vào sys.path
+import sys
+sys.path.append('../Component')
+from LoginPage import LoginPage
