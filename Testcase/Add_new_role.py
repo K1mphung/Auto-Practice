@@ -11,6 +11,7 @@ from Component.LoginPage import LoginPage
 
 class Add_new_role(unittest.TestCase):
     
+    @pytest.mark.smoke
     def test_add_role_001(self):
         driver = Chrome()
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
@@ -44,7 +45,18 @@ class Add_new_role(unittest.TestCase):
         Admin_page.click_save()
         time.sleep(5)
 
-   
+    @pytest.mark.smoke
+    def test_login_002(self):
+        driver = Chrome()
+        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+        time.sleep(5)
+        driver.maximize_window()
+
+        login_page = LoginPage(driver)
+        login_page.email_input('Admin')
+        login_page.password_input('admin123')
+        login_page.click_login()
+        time.sleep(5)
 
         driver.quit()
 
