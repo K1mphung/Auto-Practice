@@ -11,7 +11,7 @@ from Component.LoginPage import LoginPage
 
 class Add_new_role(unittest.TestCase):
     
-    def TC_001(self):
+    def test_add_role_001(self):
         driver = Chrome()
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
         time.sleep(5)

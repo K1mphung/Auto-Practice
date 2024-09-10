@@ -11,7 +11,7 @@ from Component.AdminPage import AdminPage
 
 class search_role(unittest.TestCase):
     @pytest.mark.regression
-    def TC_003(self):
+    def test_search_role_003(self):
         driver = Chrome()
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
         time.sleep(5)
